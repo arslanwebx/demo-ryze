@@ -1,0 +1,58 @@
+:root {
+  --font-display: "Outfit", "Avenir Next", "Trebuchet MS", sans-serif;
+  --font-text: "Figtree", "Avenir Next", Helvetica, sans-serif;
+
+  /* Micro-labels (eyebrows, spec lines, SKU codes, study footnotes) use the text
+     face at --tracking-mono, sentence case. There is no third typeface: a mono
+     with slab spurs reads as a serif beside the geometric sans. Pair with
+     font-variant-numeric: tabular-nums on spec lines where digits should align.
+     --font-mono is kept as an alias so existing usages resolve. */
+  --font-label: "Figtree", "Avenir Next", Helvetica, sans-serif;
+  --font-mono: var(--font-label);
+
+  /* ---------- WEIGHT ----------
+     500 is the floor. Nothing lighter ever ships: the audience is 35 to 55+ and
+     thin weights fail on low-contrast screens and in sunlight. */
+  --weight-text: 500;
+  --weight-medium: 600;
+  --weight-bold: 700;
+  --weight-display: 800;
+  --weight-max: 900;
+
+  /* ---------- SIZE ----------
+     Body floor is 20px. 17px exists ONLY for legal/meta lines that are never
+     load-bearing. There is no size below 17px in this system. */
+  --size-hero: 92px;
+  --size-display: 68px;
+  --size-h1: 48px;
+  --size-h2: 36px;
+  --size-h3: 28px;
+  --size-h4: 24px;
+  --size-body-lg: 22px;
+  --size-body: 20px;
+  --size-label: 20px;
+  --size-meta: 17px;
+
+  /* Mobile step-down (still never below 20px for body) */
+  --size-hero-m: 46px;
+  --size-display-m: 38px;
+  --size-h1-m: 32px;
+  --size-h2-m: 28px;
+  --size-h3-m: 24px;
+  --size-h4-m: 22px;
+
+  /* ---------- LINE HEIGHT ---------- */
+  --leading-tight: 0.94;
+  --leading-snug: 1.1;
+  --leading-heading: 1.15;
+  --leading-body: 1.55;
+  --leading-loose: 1.7;
+
+  /* ---------- TRACKING ----------
+     Display is set tight; small all-caps labels are the only place we open up. */
+  --tracking-display: -0.03em;
+  --tracking-heading: -0.02em;
+  --tracking-body: 0em;
+  --tracking-caps: 0.08em;
+  --tracking-mono: 0.04em;
+}

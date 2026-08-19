@@ -1,0 +1,83 @@
+:root {
+  /* ---------- BASE ----------
+     The system is black ink on white paper. Neutrals are warm (never blue-grey)
+     so they sit next to the sunny accent without going cold. */
+  --white: #FFFFFF;
+  --ink: #0D0D0C;
+  --ink-80: #38382F;
+  --ink-60: #6B6B60;
+  /* NOT A TEXT COLOUR on light surfaces: 2.8:1 on white, fails AA at every size.
+     Legal uses: --border-input, disabled states, icon furniture, and glyphs on
+     a dark fill. The lightest text colour on white is --ink-60. */
+  --ink-40: #9B9B90;
+  --ink-20: #D8D6CE;
+  --ink-10: #EAE8E1;
+  --shell: #F7F5F0;
+
+  /* ---------- ACCENTS ----------
+     Sun is the brand primary. Zest / Sky / Sprout are PRODUCT-FAMILY CODES,
+     not decoration, one hue per family, used as full blocks behind product
+     imagery and on the add-to-bag button. All four carry BLACK text only. */
+  --sun: #FFC61E;
+  --sun-press: #E9AE00;
+  --sun-tint: #FFF2CC;
+
+  --zest: #FF7A1A;
+  --zest-press: #E8650A;
+  --zest-tint: #FFE8D6;
+
+  --sky: #8CB0E8;
+  --sky-press: #6E99DC;
+  --sky-tint: #E5EDFA;
+
+  --sprout: #79C47E;
+  --sprout-press: #5FAF65;
+  --sprout-tint: #E3F2E4;
+
+  /* ---------- SEMANTIC: TEXT ---------- */
+  --text-primary: var(--ink);
+  --text-secondary: var(--ink-60);
+  --text-disabled: var(--ink-40);
+  --text-inverse: var(--white);
+  --text-link: var(--ink);
+
+  /* ---------- SEMANTIC: SURFACE ---------- */
+  --surface-page: var(--white);
+  --surface-sunk: var(--shell);
+  --surface-card: var(--white);
+  --surface-invert: var(--ink);
+  --surface-highlight: var(--sun-tint);
+
+  /* ---------- SEMANTIC: BORDER ---------- */
+  --border-hairline: var(--ink-20);
+  --border-input: var(--ink-40);
+  --border-strong: var(--ink);
+  --border-focus: var(--ink);
+
+  /* ---------- SEMANTIC: ACTION ---------- */
+  --action-primary-bg: var(--ink);
+  --action-primary-bg-press: var(--ink-80);
+  --action-primary-fg: var(--white);
+  --action-accent-bg: var(--sun);
+  --action-accent-bg-press: var(--sun-press);
+  --action-accent-fg: var(--ink);
+  --action-quiet-bg: transparent;
+  --action-quiet-fg: var(--ink);
+  --action-disabled-bg: var(--ink-10);
+  --action-disabled-fg: var(--ink-40);
+
+  /* ---------- PRODUCT FAMILY CODES ---------- */
+  --family-ingestible: var(--sun);
+  --family-topical: var(--zest);
+  --family-hair: var(--sky);
+  --family-wellness: var(--sprout);
+
+  /* ---------- STATUS ----------
+     Deliberately muted: status colour never competes with the family codes. */
+  --status-success: #2C7A33;
+  --status-success-tint: #E3F2E4;
+  --status-error: #B32D18;
+  --status-error-tint: #FBE4DF;
+  --status-info-bg: var(--ink);
+  --status-info-fg: var(--white);
+}

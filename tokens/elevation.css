@@ -1,0 +1,12 @@
+:root {
+  /* Shadows are rare and soft. Structure comes from hairlines and colour blocks,
+     not from depth. Never a dark or coloured shadow. */
+  --shadow-none: none;
+  --shadow-card: 0 1px 2px rgba(13,13,12,0.04), 0 8px 24px rgba(13,13,12,0.05);
+  --shadow-raised: 0 2px 4px rgba(13,13,12,0.05), 0 16px 40px rgba(13,13,12,0.08);
+  --shadow-sheet: 0 -8px 40px rgba(13,13,12,0.10);
+  --shadow-focus: 0 0 0 3px var(--white), 0 0 0 6px var(--ink);
+
+  --border-width-hairline: 1px;
+  --border-width-strong: 2px;
+}

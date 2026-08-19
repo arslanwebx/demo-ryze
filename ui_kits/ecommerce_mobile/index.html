@@ -1,0 +1,38 @@
+<!-- @dsCard group="Ecommerce mobile" viewport="390x844" subtitle="Mobile web: home, listing, product, bag sheet" name="Store" -->
+<!-- @startingPoint section="Ecommerce" subtitle="SUNNYCELLS mobile web store, 390px" viewport="390x844" -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=390, initial-scale=1">
+<title>SUNNYCELLS Mobile store</title>
+<link rel="stylesheet" href="../../styles.css">
+<script src="https://unpkg.com/lucide@0.469.0/dist/umd/lucide.js"></script>
+<script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+<script src="../../components/_card.js"></script>
+<script src="../ecommerce_desktop/data.js"></script>
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{width:390px;margin:0 auto;font-family:var(--font-text);font-weight:var(--weight-text);
+       font-size:var(--size-body);color:var(--text-primary);background:var(--surface-page);
+       -webkit-font-smoothing:antialiased;text-wrap:pretty;overflow-x:hidden}
+  a{color:var(--text-link);text-decoration:none}
+  a:hover{text-decoration:underline;text-underline-offset:4px}
+  ::selection{background:var(--sun)}
+</style>
+</head>
+<body>
+<div id="root"></div>
+<script>
+  window.mountDS('../../', ['Button', 'ProductCard', 'Price'], function () {
+    fetch('Screens.jsx').then(function (r) { return r.text(); }).then(function (src) {
+      var out = Babel.transform(src, { presets: [[Babel.availablePresets.react, { runtime: 'classic' }]] }).code;
+      (0, eval)(out);
+      ReactDOM.createRoot(document.getElementById('root')).render(React.createElement(window.SCKit.MobileApp));
+    }).catch(function (e) { console.error(e); document.body.textContent = String(e); });
+  });
+</script>
+</body>
+</html>

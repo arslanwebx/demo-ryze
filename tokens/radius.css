@@ -1,0 +1,17 @@
+:root {
+  /* Soft, never bubbly. The house radius is 12px; large surfaces go to 16–20px.
+     Full pills are reserved for tags, chips and star/review badges, never buttons. */
+  --radius-xs: 6px;
+  --radius-sm: 10px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 20px;
+  --radius-pill: 999px;
+
+  --radius-button: 12px;
+  --radius-input: 10px;
+  --radius-card: 16px;
+  --radius-sheet: 20px;
+  --radius-image: 12px;
+  --radius-tag: 999px;
+}

@@ -1,0 +1,11 @@
+/* SUNNYCELLS webfonts.
+   SUBSTITUTION FLAG: no brand font files were supplied. Outfit (display) and
+   Figtree (text) are the closest freely-licensed matches to the brief
+   "geometric bold, slightly rounded, easy to read at size". Swap in licensed
+   brand files when they exist: replace this @import with local @font-face rules,
+   keep the variable names.
+
+   Two faces only. An earlier draft used IBM Plex Mono for micro-labels, but its
+   slab-like spurs read as a serif next to the geometric sans and broke the voice.
+   Micro-labels now use the text face at +0.04em tracking instead. */
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800;900&family=Figtree:wght@500;600;700;800&display=swap");

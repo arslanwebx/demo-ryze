@@ -1,0 +1,15 @@
+:root {
+  /* Calm and quick. No bounce, no spring, no attention-seeking loops.
+     Motion confirms an action; it never performs. */
+  --duration-instant: 90ms;
+  --duration-fast: 160ms;
+  --duration-base: 240ms;
+  --duration-slow: 380ms;
+
+  --ease-standard: cubic-bezier(0.2, 0, 0, 1);
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in: cubic-bezier(0.7, 0, 0.84, 0);
+
+  --press-scale: 0.985;
+  --hover-lift: -2px;
+}
