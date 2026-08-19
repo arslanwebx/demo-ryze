@@ -1,0 +1,52 @@
+<!-- @dsCard group="Components" viewport="700x340" subtitle="Banner, toast, dialog and bottom sheet" name="Feedback" -->
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<link rel="stylesheet" href="../../styles.css">
+<script src="https://unpkg.com/lucide@0.469.0/dist/umd/lucide.js"></script>
+<script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+<script src="../../components/_card.js"></script>
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:var(--font-text);font-weight:var(--weight-text);color:var(--text-primary);
+       background:var(--surface-page);padding:20px 24px;-webkit-font-smoothing:antialiased}
+  .lbl{font-family:var(--font-label);font-size:12px;letter-spacing:.06em;text-transform:uppercase;
+       color:var(--ink-60);margin-bottom:10px}
+  .grp{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+  .stack{display:flex;flex-direction:column;gap:18px}
+</style></head>
+<body><div id="root"></div>
+<script type="text/plain" id="sc-demo">
+function Demo() {
+  return (
+    <div className="stack">
+      <div>
+        <div className="lbl">Banner</div>
+        <div className="stack" style={{ gap: 8 }}>
+          <Banner tone="ink" icon="truck">Free shipping · Skip or cancel anytime</Banner>
+          <Banner tone="sun" icon="repeat">Every subscription saves $10 a month</Banner>
+        </div>
+      </div>
+      <div>
+        <div className="lbl">Toast</div>
+        <div className="grp">
+          <Toast action={{ label: 'View bag', onClick: () => {} }}>Added to bag</Toast>
+        </div>
+      </div>
+      <div>
+        <div className="lbl">Dialog · inline preview</div>
+        <div style={{ position: 'relative', height: 150, borderRadius: 'var(--radius-md)', overflow: 'hidden', border: '1px solid var(--border-hairline)' }}>
+          <div style={{ position: 'absolute', inset: 0 }}>
+            <Dialog title="Added to bag" width={420}
+              footer={<><Button variant="outline" style={{ flex: 1 }}>Keep shopping</Button><Button style={{ flex: 1 }}>Checkout</Button></>}>
+              SC-12 Liquid Collagen · $49
+            </Dialog>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+</script>
+<script>mountCard('../../', ["Banner","Toast","Dialog","Button"]);</script></body></html>

@@ -1,0 +1,28 @@
+<!-- @dsCard group="Brand" viewport="700x195" subtitle="Integers only. Never a decimal, never a .99." name="Price rule" -->
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<link rel="stylesheet" href="../styles.css">
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:var(--font-text);font-weight:var(--weight-text);color:var(--text-primary);
+       background:var(--surface-page);padding:20px 24px;-webkit-font-smoothing:antialiased}
+  .row{display:flex;gap:var(--space-3);align-items:stretch}
+  .col{display:flex;flex-direction:column;gap:var(--space-2)}
+  .mono{font-family:var(--font-label);font-size:12px;letter-spacing:var(--tracking-mono);
+        color:var(--ink-60)}
+  .hex{font-family:var(--font-label);font-size:12px;color:var(--ink-60)}
+</style></head><body><div class="row" style="gap:24px;align-items:center">
+   <div style="flex:1">
+     <div style="font-family:var(--font-display);font-weight:900;font-size:52px;letter-spacing:-0.03em">$49</div>
+     <div class="mono" style="color:var(--status-success);margin-top:4px">Correct</div>
+   </div>
+   <div style="flex:1;color:var(--ink-60)">
+     <div style="font-family:var(--font-display);font-weight:900;font-size:38px;letter-spacing:-0.03em;text-decoration:line-through">$49.00</div>
+     <div style="font-family:var(--font-display);font-weight:900;font-size:38px;letter-spacing:-0.03em;text-decoration:line-through">$49.99</div>
+   </div>
+   <div style="flex:1.4;border-left:1px solid var(--border-hairline);padding-left:20px;font-size:17px;line-height:1.5;font-weight:600">
+     <div><span style="color:var(--ink-60);text-decoration:line-through">$49</span> <strong>$39</strong> · Save $10</div>
+     <div style="color:var(--ink-60);margin-top:6px">Savings are dollars, not percentages.</div>
+     <div style="color:var(--ink-60);margin-top:6px">Ratings are the only decimal: <strong style="color:var(--ink)">4.7</strong></div>
+   </div>
+ </div></body></html>

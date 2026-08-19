@@ -1,0 +1,50 @@
+<!-- @dsCard group="Components" viewport="700x340" subtitle="Nav links, tabs, accordion, breadcrumb" name="Navigation" -->
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<link rel="stylesheet" href="../../styles.css">
+<script src="https://unpkg.com/lucide@0.469.0/dist/umd/lucide.js"></script>
+<script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+<script src="../../components/_card.js"></script>
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:var(--font-text);font-weight:var(--weight-text);color:var(--text-primary);
+       background:var(--surface-page);padding:20px 24px;-webkit-font-smoothing:antialiased}
+  .lbl{font-family:var(--font-label);font-size:12px;letter-spacing:.06em;text-transform:uppercase;
+       color:var(--ink-60);margin-bottom:10px}
+  .grp{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+  .stack{display:flex;flex-direction:column;gap:18px}
+</style></head>
+<body><div id="root"></div>
+<script type="text/plain" id="sc-demo">
+function Demo() {
+  const [tab, setTab] = React.useState('Ingredients');
+  return (
+    <div className="stack">
+      <div>
+        <div className="lbl">Nav links</div>
+        <div className="grp" style={{ gap: 28 }}>
+          <NavLink active>Skin</NavLink>
+          <NavLink>Hair</NavLink>
+          <NavLink>Wellness</NavLink>
+          <NavLink>Our science</NavLink>
+        </div>
+      </div>
+      <div>
+        <div className="lbl">Breadcrumb</div>
+        <Breadcrumb items={[{ label: 'Home' }, { label: 'Skin' }, { label: 'SC-04 Barrier Cream' }]} />
+      </div>
+      <div>
+        <div className="lbl">Tabs</div>
+        <Tabs items={['Benefits', 'Ingredients', 'Results']} value={tab} onChange={setTab} />
+      </div>
+      <Accordion defaultOpen={0} items={[
+        { title: 'How soon will I see results?', body: 'Most women notice firmer skin around week six. The 12-week study is where the numbers come from.' },
+        { title: 'Can I take this with my other supplements?', body: 'Yes. SC-12 has no stimulants and no proprietary blend, so you can see exactly what it adds to what you already take.' }
+      ]} />
+    </div>
+  );
+}
+</script>
+<script>mountCard('../../', ["NavLink","Tabs","Accordion","Breadcrumb"]);</script></body></html>

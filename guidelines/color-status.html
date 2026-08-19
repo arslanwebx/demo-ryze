@@ -1,0 +1,24 @@
+<!-- @dsCard group="Colors" viewport="700x165" subtitle="Muted on purpose, status never competes with the family codes" name="Status" -->
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<link rel="stylesheet" href="../styles.css">
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:var(--font-text);font-weight:var(--weight-text);color:var(--text-primary);
+       background:var(--surface-page);padding:20px 24px;-webkit-font-smoothing:antialiased}
+  .row{display:flex;gap:var(--space-3);align-items:stretch}
+  .col{display:flex;flex-direction:column;gap:var(--space-2)}
+  .mono{font-family:var(--font-label);font-size:12px;letter-spacing:var(--tracking-mono);
+        color:var(--ink-60)}
+  .hex{font-family:var(--font-label);font-size:12px;color:var(--ink-60)}
+</style></head><body><div class="row">
+   <div style="flex:1;background:var(--status-success-tint);border-radius:var(--radius-md);padding:14px 16px">
+     <div style="font-weight:800;color:var(--status-success);font-size:17px">Order confirmed</div>
+     <div class="hex" style="margin-top:6px">#2C7A33 · --status-success</div></div>
+   <div style="flex:1;background:var(--status-error-tint);border-radius:var(--radius-md);padding:14px 16px">
+     <div style="font-weight:800;color:var(--status-error);font-size:17px">We need an email address</div>
+     <div class="hex" style="margin-top:6px">#B32D18 · --status-error</div></div>
+   <div style="flex:1;background:var(--ink);border-radius:var(--radius-md);padding:14px 16px">
+     <div style="font-weight:800;color:var(--white);font-size:17px">Free shipping, always</div>
+     <div class="hex" style="margin-top:6px;color:var(--ink-40)">--status-info-bg</div></div>
+ </div></body></html>

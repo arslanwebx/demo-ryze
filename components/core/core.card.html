@@ -1,0 +1,81 @@
+<!-- @dsCard group="Components" viewport="700x470" subtitle="Buttons, icon buttons, badges, tags, cards, wordmark" name="Core" -->
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<link rel="stylesheet" href="../../styles.css">
+<script src="https://unpkg.com/lucide@0.469.0/dist/umd/lucide.js"></script>
+<script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+<script src="../../components/_card.js"></script>
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:var(--font-text);font-weight:var(--weight-text);color:var(--text-primary);
+       background:var(--surface-page);padding:20px 24px;-webkit-font-smoothing:antialiased}
+  .lbl{font-family:var(--font-label);font-size:12px;letter-spacing:.06em;text-transform:uppercase;
+       color:var(--ink-60);margin-bottom:10px}
+  .grp{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+  .stack{display:flex;flex-direction:column;gap:18px}
+</style></head>
+<body><div id="root"></div>
+<script type="text/plain" id="sc-demo">
+function Demo() {
+  return (
+    <div className="stack">
+      <div>
+        <div className="lbl">Button · variants</div>
+        <div className="grp">
+          <Button>Shop all</Button>
+          <Button variant="accent" price={49}>Add to bag</Button>
+          <Button variant="outline">Learn more</Button>
+          <Button variant="quiet" iconRight="arrow-right">See the study</Button>
+          <Button disabled>Back in stock soon</Button>
+        </div>
+      </div>
+      <div>
+        <div className="lbl">Button · family fills &amp; sizes</div>
+        <div className="grp">
+          <Button variant="zest" size="sm" price={54}>Add</Button>
+          <Button variant="sky" size="md" price={59}>Add to bag</Button>
+          <Button variant="sprout" size="lg" price={39}>Add to bag</Button>
+        </div>
+      </div>
+      <div className="grp" style={{ gap: 32 }}>
+        <div>
+          <div className="lbl">Icon button</div>
+          <div className="grp">
+            <IconButton icon="search" label="Search" />
+            <IconButton icon="user" label="Account" variant="outline" />
+            <IconButton icon="shopping-bag" label="Bag" variant="solid" />
+          </div>
+        </div>
+        <div>
+          <div className="lbl">Badge</div>
+          <div className="grp">
+            <Badge>Bestseller</Badge>
+            <Badge tone="sun">New</Badge>
+            <Badge tone="success">In stock</Badge>
+          </div>
+        </div>
+        <div>
+          <div className="lbl">Tag</div>
+          <div className="grp">
+            <Tag selected>Skin</Tag>
+            <Tag onClick={() => {}}>Hair</Tag>
+          </div>
+        </div>
+      </div>
+      <div className="grp" style={{ gap: 16, alignItems: 'stretch' }}>
+        <Card style={{ flex: 1 }}>
+          <Wordmark size={24} />
+          <div style={{ fontSize: 20, lineHeight: 1.5, marginTop: 10 }}>Card: white, hairline, 16px corners, no resting shadow.</div>
+        </Card>
+        <Card tone="ink" hoverable style={{ flex: 1 }}>
+          <Wordmark size={24} tone="inverse" />
+          <div style={{ fontSize: 20, lineHeight: 1.5, marginTop: 10 }}>Inverted card, hoverable, lifts 2px.</div>
+        </Card>
+      </div>
+    </div>
+  );
+}
+</script>
+<script>mountCard('../../', ["Button","IconButton","Badge","Tag","Card","Wordmark","Icon"]);</script></body></html>

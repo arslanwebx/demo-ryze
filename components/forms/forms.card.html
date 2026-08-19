@@ -1,0 +1,48 @@
+<!-- @dsCard group="Components" viewport="700x400" subtitle="Input, select, checkbox, radio cards, switch, quantity" name="Forms" -->
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<link rel="stylesheet" href="../../styles.css">
+<script src="https://unpkg.com/lucide@0.469.0/dist/umd/lucide.js"></script>
+<script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+<script src="../../components/_card.js"></script>
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:var(--font-text);font-weight:var(--weight-text);color:var(--text-primary);
+       background:var(--surface-page);padding:20px 24px;-webkit-font-smoothing:antialiased}
+  .lbl{font-family:var(--font-label);font-size:12px;letter-spacing:.06em;text-transform:uppercase;
+       color:var(--ink-60);margin-bottom:10px}
+  .grp{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+  .stack{display:flex;flex-direction:column;gap:18px}
+</style></head>
+<body><div id="root"></div>
+<script type="text/plain" id="sc-demo">
+function Demo() {
+  const [checked, setChecked] = React.useState(true);
+  const [on, setOn] = React.useState(false);
+  const [mode, setMode] = React.useState('sub');
+  const [qty, setQty] = React.useState(2);
+  return (
+    <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 24 }}>
+      <div className="stack">
+        <Input label="Email" type="email" placeholder="you@example.com" hint="Order updates only." />
+        <Input label="Email" type="email" defaultValue="you@" error="We need a full email address to send your order." />
+        <Select label="Deliver every" options={['30 days', '60 days', '90 days']} />
+      </div>
+      <div className="stack">
+        <RadioOption name="m" label="One bottle" description="Thirty servings." price={39} priceNote="per month"
+          selected={mode === 'sub'} onSelect={() => setMode('sub')} />
+        <RadioOption name="m" label="Two bottles" description="Sixty servings." price={74} priceNote="per month"
+          selected={mode === 'one'} onSelect={() => setMode('one')} badge={<Badge tone="sun">Save $4</Badge>} />
+        <div className="grp" style={{ gap: 28 }}>
+          <QuantityStepper value={qty} onChange={setQty} />
+          <Checkbox label="Email me when it ships" checked={checked} onChange={setChecked} />
+        </div>
+        <Switch label="Pause deliveries" description="Resume whenever you like." checked={on} onChange={setOn} />
+      </div>
+    </div>
+  );
+}
+</script>
+<script>mountCard('../../', ["Input","Select","Checkbox","RadioOption","Switch","QuantityStepper","Badge"]);</script></body></html>

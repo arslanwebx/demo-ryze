@@ -1,0 +1,32 @@
+<!-- @dsCard group="Colors" viewport="700x200" subtitle="The brand accent. Black text only, never white" name="Sunny primary" -->
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<link rel="stylesheet" href="../styles.css">
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:var(--font-text);font-weight:var(--weight-text);color:var(--text-primary);
+       background:var(--surface-page);padding:20px 24px;-webkit-font-smoothing:antialiased}
+  .row{display:flex;gap:var(--space-3);align-items:stretch}
+  .col{display:flex;flex-direction:column;gap:var(--space-2)}
+  .mono{font-family:var(--font-label);font-size:12px;letter-spacing:var(--tracking-mono);
+        color:var(--ink-60)}
+  .hex{font-family:var(--font-label);font-size:12px;color:var(--ink-60)}
+</style></head><body><div class="row" style="align-items:stretch">
+   <div style="flex:2;background:var(--sun);border-radius:var(--radius-md);padding:18px 20px;display:flex;flex-direction:column;justify-content:space-between">
+     <div style="font-family:var(--font-display);font-weight:900;font-size:34px;letter-spacing:-0.03em">SUN</div>
+     <div style="font-family:var(--font-label);font-size:12px;letter-spacing:.04em">#FFC61E · --sun</div>
+   </div>
+   <div style="flex:1"><div style="height:76px;border-radius:var(--radius-md);background:var(--sun-press);
+   border:1px solid var(--border-hairline);display:flex;align-items:flex-end;padding:8px 10px;
+   color:var(--ink);font-weight:700;font-size:13px">Press</div>
+   <div class="hex" style="margin-top:6px">#E9AE00<br><span style="color:var(--ink-60)">--sun-press</span></div></div>
+   <div style="flex:1"><div style="height:76px;border-radius:var(--radius-md);background:var(--sun-tint);
+   border:1px solid var(--border-hairline);display:flex;align-items:flex-end;padding:8px 10px;
+   color:var(--ink);font-weight:700;font-size:13px">Tint</div>
+   <div class="hex" style="margin-top:6px">#FFF2CC<br><span style="color:var(--ink-60)">--sun-tint</span></div></div>
+   <div style="flex:1.2;border:1px solid var(--border-hairline);border-radius:var(--radius-md);padding:12px 14px">
+     <div class="mono" style="margin-bottom:8px">Rule</div>
+     <div style="font-size:15px;line-height:1.4;font-weight:600">Yellow always carries <strong>black</strong> text.<br>
+     <span style="color:var(--ink-60)">White on yellow is forbidden.</span></div>
+   </div>
+ </div></body></html>
