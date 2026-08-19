@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Your Bag | SUNNYCELLS</title>
+<meta name="description" content="Review your SUNNYCELLS Metabolic Morning Blend subscription before checkout.">
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="commerce.css">
+</head>
+<body class="commerce-body" data-page="cart">
+<a class="skip-link" href="#main">Skip to content</a>
+<div class="offer-bar">50% OFF FIRST ORDER <span>$19 first month, then $39 · Free shipping, always</span></div>
+<header class="commerce-header">
+  <div class="commerce-header__left"><a class="commerce-back" href="index.html">Back to shop</a></div>
+  <a class="wordmark" href="index.html">SUNNYCELLS</a>
+  <div class="commerce-header__right"><a class="commerce-bag-link" href="cart.html">Bag <span class="commerce-bag-count" data-cart-count>0</span></a></div>
+</header>
+
+<main class="commerce-main" id="main">
+  <p class="commerce-kicker">Metabolic Morning Blend subscription</p>
+  <h1 class="commerce-title">YOUR BAG.</h1>
+  <p class="commerce-lead">Review your delivery schedule before checkout. Your first order receives the standing 50% first-order offer. Shipping stays free.</p>
+
+  <div class="cart-layout">
+    <section class="cart-items" id="cartItems" aria-live="polite"></section>
+
+    <aside class="order-card" aria-labelledby="summaryHeading">
+      <div class="order-card__head"><h2 id="summaryHeading">Order summary</h2></div>
+      <div class="order-card__body">
+        <div class="summary-row"><span>Products today</span><strong id="cartSubtotal">$0</strong></div>
+        <div class="summary-row"><span>Shipping</span><strong>Free</strong></div>
+        <div class="summary-row summary-row--total"><span>Due today</span><strong id="cartTotal">$0</strong></div>
+        <p class="summary-note" id="cartRenewal">Add Metabolic Morning Blend to see your renewal schedule.</p>
+        <a class="btn btn-black" id="checkoutButton" href="checkout.html" aria-disabled="true">CONTINUE TO CHECKOUT</a>
+        <div class="trust-lines"><span>Free shipping, always</span><span>Skip or cancel anytime</span><span>60-day returns</span></div>
+      </div>
+    </aside>
+  </div>
+
+  <section class="cart-assurance" aria-label="Subscription terms">
+    <div><b>No shipping threshold</b><p>Every SUNNYCELLS subscription ships free.</p></div>
+    <div><b>Subscription stays flexible</b><p>Choose your cadence, then skip or cancel when needed.</p></div>
+    <div><b>Sixty days to decide</b><p>The SUNNYCELLS return window stays visible before checkout.</p></div>
+  </section>
+</main>
+
+<footer class="commerce-footer"><span>© <span data-year>2026</span> SUNNYCELLS</span><span>Questions? <a href="index.html#faq">Read the FAQ</a></span></footer>
+<div class="commerce-toast" role="status" aria-live="polite" id="commerceToast">Bag updated</div>
+<script src="script.js"></script>
+</body>
+</html>
