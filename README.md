@@ -1,18 +1,20 @@
-# MORROW — Premium Functional Coffee Demo
+# MORROW — Morning Balance DTC Demo
 
-A high-conversion, original direct-to-consumer landing page concept for a functional coffee brand.
+An original long-form ecommerce landing page concept for a modern wellness brand.
 
-## What’s included
-- Premium editorial landing page design
-- Responsive mobile-first layout
-- Interactive purchase options and cart drawer
-- Original vector product artwork
-- Benefits, ingredients, reviews, ritual, guarantee and FAQ sections
-- Sticky mobile purchase bar
-- Fast static HTML/CSS/JS build with no framework dependency
+## Included
+- Full desktop and mobile navigation
+- Long-form conversion-focused storytelling
+- Original MORROW product and lifestyle artwork
+- Product benefits, ingredients and daily ritual sections
+- Interactive ingredient details
+- Subscription / one-time purchase selector
+- Guarantee, reviews, FAQ and full footer
+- Sticky mobile purchase CTA
+- Responsive static HTML/CSS/JS with no framework dependency
 
 ## Run locally
-Open `index.html` in your browser, or serve the folder with any static web server.
+Open `index.html` directly in a browser or serve the folder with any static web server.
 
 ## Ecommerce handoff
-The current checkout is intentionally a demo interaction. For production, connect the purchase controls to Shopify products/cart/checkout while keeping the same front-end design.
+The current checkout and pricing are intentionally demo interactions. For a production store, connect the purchase controls to Shopify products, subscriptions, cart and checkout while preserving the front-end design.
