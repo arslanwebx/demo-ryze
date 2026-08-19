@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Checkout | SUNNYCELLS</title>
+<meta name="description" content="SUNNYCELLS checkout for Metabolic Morning Blend subscriptions.">
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="commerce.css">
+</head>
+<body class="commerce-body checkout-body" data-page="checkout">
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="checkout-header">
+  <a class="wordmark" href="index.html">SUNNYCELLS</a>
+  <span>Secure checkout</span>
+  <a class="commerce-bag-link" href="cart.html">Bag <span class="commerce-bag-count" data-cart-count>0</span></a>
+</header>
+
+<main class="checkout-main" id="main">
+  <div class="checkout-layout" id="checkoutLayout">
+    <section class="checkout-form-column">
+      <a class="commerce-back" href="cart.html">Back to bag</a>
+      <p class="commerce-kicker">Almost there</p>
+      <h1 class="commerce-title">CHECKOUT.</h1>
+      <p class="commerce-lead">Complete your contact and shipping information. Your subscription terms stay visible before payment.</p>
+
+      <form id="checkoutForm" novalidate>
+        <section class="checkout-section">
+          <div class="checkout-section__head"><span>01</span><h2>Contact</h2></div>
+          <label class="commerce-field"><span>Email address</span><input name="email" type="email" autocomplete="email" placeholder="you@example.com" required><small>We use this for order and subscription updates.</small></label>
+        </section>
+
+        <section class="checkout-section">
+          <div class="checkout-section__head"><span>02</span><h2>Shipping</h2></div>
+          <div class="commerce-grid">
+            <label class="commerce-field"><span>First name</span><input name="firstName" autocomplete="given-name" required></label>
+            <label class="commerce-field"><span>Last name</span><input name="lastName" autocomplete="family-name" required></label>
+            <label class="commerce-field commerce-span-2"><span>Street address</span><input name="address" autocomplete="address-line1" required></label>
+            <label class="commerce-field commerce-span-2"><span>Apartment, suite, etc. <em>Optional</em></span><input name="address2" autocomplete="address-line2"></label>
+            <label class="commerce-field"><span>City</span><input name="city" autocomplete="address-level2" required></label>
+            <label class="commerce-field"><span>State / region</span><input name="region" autocomplete="address-level1" required></label>
+            <label class="commerce-field"><span>ZIP / postal code</span><input name="postalCode" autocomplete="postal-code" required></label>
+            <label class="commerce-field"><span>Country / region</span><input name="country" autocomplete="country-name" required></label>
+          </div>
+        </section>
+
+        <section class="checkout-section">
+          <div class="checkout-section__head"><span>03</span><h2>Payment</h2></div>
+          <div class="payment-panel" id="paymentPanel">
+            <div class="payment-panel__title"><b>Secure payment</b><span>PCI-compliant provider required</span></div>
+            <div class="payment-provider-slot">
+              <div class="payment-mark">✓</div>
+              <div><b>Ready for Stripe, Shopify or another secure provider</b><p>This frontend never stores card numbers. Connect a real payment element here before accepting live orders.</p></div>
+            </div>
+          </div>
+          <p class="payment-help" id="paymentHelp">Contact and shipping details work now. Live charging begins only after a payment provider is connected.</p>
+        </section>
+
+        <section class="checkout-section">
+          <div class="checkout-section__head"><span>04</span><h2>Subscription terms</h2></div>
+          <label class="terms-check"><input type="checkbox" name="subscriptionTerms" required><span>I understand this is a recurring subscription. The first order is $19 per pouch, then $39 per pouch according to my selected delivery schedule. I can skip or cancel anytime.</span></label>
+        </section>
+
+        <div class="checkout-actions">
+          <div><span>Due today</span><strong id="checkoutTotalMobile">$0</strong></div>
+          <button class="btn btn-black" type="submit" id="checkoutSubmit">CONTINUE TO SECURE PAYMENT</button>
+          <p>Free shipping, always · 60-day returns</p>
+        </div>
+      </form>
+    </section>
+
+    <aside class="checkout-summary" aria-labelledby="checkoutSummaryHeading">
+      <div class="checkout-summary__inner">
+        <div class="checkout-summary__head"><h2 id="checkoutSummaryHeading">Your order</h2><a href="cart.html">Edit bag</a></div>
+        <div id="checkoutItems"></div>
+        <div class="summary-row"><span>Products today</span><strong id="checkoutSubtotal">$0</strong></div>
+        <div class="summary-row"><span>Shipping</span><strong>Free</strong></div>
+        <div class="summary-row summary-row--total"><span>Due today</span><strong id="checkoutTotal">$0</strong></div>
+        <p class="summary-note" id="checkoutRenewal"></p>
+        <div class="checkout-assurance"><b>Subscription stays in your control.</b><span>Skip or cancel anytime</span><span>Free shipping on every order</span><span>60-day returns</span></div>
+      </div>
+    </aside>
+  </div>
+
+  <section class="checkout-empty" id="checkoutEmpty" hidden>
+    <p class="commerce-kicker">Nothing here yet</p>
+    <h1 class="commerce-title">YOUR BAG IS EMPTY.</h1>
+    <p>Add Metabolic Morning Blend before starting checkout.</p>
+    <a class="btn btn-black" href="index.html#buy">SHOP METABOLIC MORNING BLEND</a>
+  </section>
+</main>
+
+<footer class="commerce-footer"><span>© <span data-year>2026</span> SUNNYCELLS</span><span>Free shipping, always · 60-day returns</span></footer>
+<div class="commerce-toast" role="status" aria-live="polite" id="commerceToast">Checkout details saved</div>
+<script src="script.js"></script>
+</body>
+</html>
